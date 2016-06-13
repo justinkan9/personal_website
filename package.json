@@ -1,0 +1,18 @@
+{
+  "name": "justinkang",
+  "version": "0.0.1",
+  "description": "Justin's awesome website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Justin S Kang",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinkan9/personal_website"
+  },
+  "dependencies": {
+    "express": "4.13.4"
+  }
+}
