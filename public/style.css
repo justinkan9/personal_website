@@ -32,6 +32,7 @@ body {
     top: 200px;
     height: 200px;
     filter: invert(100%);
+    -webkit-filter: invert(100%);
     background-size: 100% 250%;
 
     -moz-animation: move-clouds-back 200s linear infinite;
