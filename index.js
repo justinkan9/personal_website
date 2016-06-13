@@ -4,9 +4,7 @@ var http = require("http").Server(app);
 var fs = require("fs");
 var path = require("path");
 
-http.listen(80, function() {
-    console.log("Website is up and running <3");
-});
+app.set('port', (process.env.PORT || 80));
 
 app.use("/public", express.static(__dirname + "/public"));
 
@@ -17,4 +15,8 @@ app.get("/", function(req, res) {
         res.write(html);
         res.end();
     });
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
