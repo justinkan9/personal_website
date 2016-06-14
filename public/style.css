@@ -16,6 +16,28 @@ body {
     background-position: 0% 100%;
 }
 
+.lights-background {
+    background-size: 100% 100%;
+    background-image: url(img/lights_normal.jpg);
+    background-position: 0% 100%;
+    z-index: 1;
+}
+
+.lights-background:hover {
+    opacity: 0;
+}
+
+.lights-lit-background {
+    background-size: 100% 100%;
+    background-image: url(img/lights_blur.jpg);
+    background-position: 0% 100%;
+    z-index: -1;
+    position: absolute;
+    top: 200px;
+    height: 200px;
+    width: 100%;
+}
+
 .contacts-background {
     background-size: 100% 180%;
     background-image: url(img/clouds.jpg);
@@ -29,7 +51,7 @@ body {
     width: 100%;
     display: block;
     position: absolute;
-    top: 200px;
+    top: 400px;
     height: 200px;
     filter: invert(100%);
     -webkit-filter: invert(100%);
