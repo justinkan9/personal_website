@@ -1,6 +1,6 @@
 function buildHomepage() {
     buildLogoBar();
-    buildContactsBar();
+//    buildContactsBar();
 }
 
 function buildTopBar() {
