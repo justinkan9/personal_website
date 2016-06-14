@@ -16,13 +16,14 @@ function buildBar() {
 
 function buildLogoBar() {
     var barPanel = buildBar();
-    (barPanel).addClass("logo-background");
+/*    (barPanel).addClass("logo-background");
     var logo = $("<img/>").attr("src", "public/img/jkang.svg")
         .addClass("img-simple bar-padding-mid")
         .click(function() {
             window.location = "/"; //TODO Should go to resume
         });
     $(barPanel).append(logo);
+*/
 }
 
 function buildCircleLinkBtn(icon, color, href = "#") {
