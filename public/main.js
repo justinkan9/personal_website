@@ -1,6 +1,6 @@
 function buildHomepage() {
     buildLogoBar();
-//    buildContactsBar();
+    buildContactsBar();
 }
 
 function buildTopBar() {
@@ -16,17 +16,17 @@ function buildBar() {
 
 function buildLogoBar() {
     var barPanel = buildBar();
-/*    (barPanel).addClass("logo-background");
+    (barPanel).addClass("logo-background");
     var logo = $("<img/>").attr("src", "public/img/jkang.svg")
         .addClass("img-simple bar-padding-mid")
         .click(function() {
             window.location = "/"; //TODO Should go to resume
         });
     $(barPanel).append(logo);
-*/
+
 }
 
-function buildCircleLinkBtn(icon, color, href = "#") {
+function buildCircleLinkBtn(icon, color, href) {
     var img = $("<i/>").addClass("fa fa-4x " + icon);
     var link = $("<a/>").attr("href", href)
         .attr("target", "_blank")
