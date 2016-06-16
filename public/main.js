@@ -29,8 +29,9 @@ function buildLogoBar() {
 function buildVideosBar() {
     var barPanel = buildBar();
     $(barPanel).addClass("lights-background");
-    var pulseLight = $("<div/>").addClass("lights-lit-background");
-    $("body").append(pulseLight);
+    var selfImg = $("<img/>").attr("id", "self-img")
+        .attr("src", "public/img/self-min.png");
+    $("body").append(selfImg);
 }
 
 function buildCircleLinkBtn(icon, color, href) {
@@ -48,9 +49,8 @@ function buildContactsBar() {
     $(barPanel).addClass("contacts-background");
     var cloudPanel = $("<div/>").addClass("clouds");
     $(barPanel).append(buildCircleLinkBtn("fa-envelope", "#9EC44F", "mailto:justinkan9@yahoo.com"));
-    $(barPanel).append(buildCircleLinkBtn("fa-facebook", "#427BA6", "https://www.facebook.com/justinokang"));
-    $(barPanel).append(buildCircleLinkBtn("fa-github", "#BE2481", "https://github.com/justinkan9"));
     $(barPanel).append(buildCircleLinkBtn("fa-linkedin", "#F1822D", "https://www.linkedin.com/in/justin-kang-a4b5125b"));
-    $(barPanel).append(buildCircleLinkBtn("fa-tumblr", "#FFD65B", "http://justinokang.tumblr.com/"));
+    $(barPanel).append(buildCircleLinkBtn("fa-github", "#BE2481", "https://github.com/justinkan9"));
+    $(barPanel).append(buildCircleLinkBtn("fa-facebook", "#427BA6", "https://www.facebook.com/justinokang"));
     $(barPanel).append(cloudPanel);
 }

@@ -12,41 +12,34 @@ body {
 
 .logo-background {
     background-size: 100% 180%;
-    background-image: url(img/mountains.jpg);
+    background-image: url(img/mountains-min.jpg);
     background-position: 0% 100%;
 }
 
 .lights-background {
     background-size: 100% 100%;
-    background-image: url(img/lights_normal.jpg);
+    background-image: url(img/infinity-min.jpg);
     background-position: 0% 100%;
     z-index: 1;
+
+    -moz-animation: lights-switch 30s linear infinite;
+    -o-animation: lights-switch 30s linear infinite;
+    -webkit-animation: lights-switch 30s linear infinite;
+    animation: lights-switch 30s linear infinite;
 }
 
 .lights-background:hover {
-    opacity: 0;
-}
-
-.lights-lit-background {
-    background-size: 100% 100%;
-    background-image: url(img/lights_blur.jpg);
-    background-position: 0% 100%;
-    z-index: -1;
-    position: absolute;
-    top: 200px;
-    height: 200px;
-    width: 100%;
 }
 
 .contacts-background {
     background-size: 100% 180%;
-    background-image: url(img/clouds.jpg);
+    background-image: url(img/clouds-min.jpg);
     background-position: 0% 100%;
     text-align: center;
 }
 
 .clouds {
-    background: transparent url(img/clouds.png) repeat top center;
+    background: transparent url(img/clouds-min.png) repeat top center;
     z-index: 3;
     width: 100%;
     display: block;
@@ -76,6 +69,24 @@ body {
 @-moz-keyframes move-clouds-back {
     from {background-position:0 0;}
     to {background-position:10000px 0;}
+}
+
+@keyframes lights-switch {
+    0% {filter: hue-rotate(0deg);}
+    50% {filter: hue-rotate(180deg);}
+    100% {filter: hue-rotate(360deg);}
+}
+
+@-webkit-keyframes lights-switch {
+    0% {-webkit-filter: hue-rotate(0deg);}
+    50% {-webkit-filter: hue-rotate(180deg);}
+    100% {-webkit-filter: hue-rotate(360deg);}
+}
+
+@-moz-keyframes lights-switch {
+    0% {-webkit-filter: hue-rotate(0deg);}
+    50% {-webkit-filter: hue-rotate(180deg);}
+    100% {-webkit-filter: hue-rotate(360deg);}
 }
 
 .img-simple {
@@ -129,4 +140,11 @@ body {
     text-align: center;
     border: 2px solid;
     border-radius: 50%;
+}
+
+#self-img {
+    height: 180px;
+    position: absolute;
+    top: 220px;
+    left: 10%;
 }
