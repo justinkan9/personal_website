@@ -47,11 +47,12 @@ body {
 .clouds {
     background: transparent url(img/clouds-min.png) repeat top center;
     z-index: 3;
-    width: 100%;
     display: block;
     position: absolute;
-    top: 400px;
-    height: 200px;
+    top: 405px;
+    left: 5px;
+    right: 5px;
+    height: 195px;
     filter: invert(100%);
     -webkit-filter: invert(100%);
     background-size: 100% 250%;
