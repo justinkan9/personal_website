@@ -30,7 +30,7 @@ function buildVideosBar() {
     var barPanel = buildBar();
     $(barPanel).addClass("lights-background");
     var selfImg = $("<img/>").attr("id", "self-img")
-        .attr("src", "public/img/self-min.png");
+        .attr("src", "public/img/run.svg");
     $("body").append(selfImg);
 }
 

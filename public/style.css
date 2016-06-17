@@ -143,8 +143,8 @@ body {
 }
 
 #self-img {
-    height: 180px;
+    height: 380px;
     position: absolute;
     top: 220px;
-    left: 10%;
+    right: 5%;
 }
