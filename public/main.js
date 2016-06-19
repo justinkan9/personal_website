@@ -1,37 +1,48 @@
 function buildHomepage() {
     buildLogoBar();
-    buildVideosBar();
+    buildAboutMeBar();
+//    buildVideosBar();
+//    buildRainBar();
     buildContactsBar();
 }
 
-function buildTopBar() {
-    var stars = $("<div/>").attr("id", "stars-banner");
-    $("body").append(stars);
-}
-
-function buildBar() {
-    var barPanel = $("<div/>").addClass("bar-panel");
+function buildBarPage(imagePath) {
+    var barPanel = $("<div/>").addClass("bar-panel")
+        .css("background-image", "url(public/img/" + imagePath + ")")
+        .attr("data-stellar-background-ratio", "0.5")
+        .stellar();
     $("body").append(barPanel);
     return barPanel;
 }
 
 function buildLogoBar() {
-    var barPanel = buildBar();
-    $(barPanel).addClass("logo-background");
+    var barPanel = buildBarPage("rainbow-star-min.png");
     var logo = $("<img/>").attr("src", "public/img/jkang.svg")
-        .addClass("img-simple bar-padding-mid")
-        .click(function() {
-            window.location = "/"; //TODO Should go to resume
-        });
-    $(barPanel).append(logo);
+        .attr("id", "logo-img")
+    var nameLabel = $("<h3/>").addClass("name-label")
+        .text("Justin   Seokhyun   Kang");
+    var scrollDownImg = $("<i/>").addClass("fa fa-angle-down fa-4x scroll-down-img");
+    $(barPanel).append(logo)
+        .append(nameLabel)
+        .append(scrollDownImg);
 }
 
-function buildVideosBar() {
-    var barPanel = buildBar();
-    $(barPanel).addClass("lights-background");
+function buildAboutMeBar() {
+    var barPanel = buildBarPage("field-min.jpg");
     var selfImg = $("<img/>").attr("id", "self-img")
         .attr("src", "public/img/run.svg");
-    $("body").append(selfImg);
+    $(barPanel).append(selfImg);
+}
+
+function buildContactsBar() {
+    var barPanel = buildBarPage("clouds-min.jpg");
+    $(barPanel).addClass("contacts-background");
+    var cloudPanel = $("<div/>").addClass("clouds");
+    $(barPanel).append(buildCircleLinkBtn("fa-envelope", "#9EC44F", "mailto:justinkan9@yahoo.com"));
+    $(barPanel).append(buildCircleLinkBtn("fa-linkedin", "#F1822D", "https://www.linkedin.com/in/justin-kang-a4b5125b"));
+    $(barPanel).append(buildCircleLinkBtn("fa-github", "#BE2481", "https://github.com/justinkan9"));
+    $(barPanel).append(buildCircleLinkBtn("fa-facebook", "#427BA6", "https://www.facebook.com/justinokang"));
+    $(barPanel).append(cloudPanel);
 }
 
 function buildCircleLinkBtn(icon, color, href) {
@@ -44,13 +55,21 @@ function buildCircleLinkBtn(icon, color, href) {
     return link;
 }
 
-function buildContactsBar() {
-    var barPanel = buildBar();
-    $(barPanel).addClass("contacts-background");
-    var cloudPanel = $("<div/>").addClass("clouds");
-    $(barPanel).append(buildCircleLinkBtn("fa-envelope", "#9EC44F", "mailto:justinkan9@yahoo.com"));
-    $(barPanel).append(buildCircleLinkBtn("fa-linkedin", "#F1822D", "https://www.linkedin.com/in/justin-kang-a4b5125b"));
-    $(barPanel).append(buildCircleLinkBtn("fa-github", "#BE2481", "https://github.com/justinkan9"));
-    $(barPanel).append(buildCircleLinkBtn("fa-facebook", "#427BA6", "https://www.facebook.com/justinokang"));
-    $(barPanel).append(cloudPanel);
+
+
+
+
+/*
+function buildVideosBar() {
+    var barPanel = buildBarPage();
+    $(barPanel).addClass("lights-background");
+    var selfImg = $("<img/>").attr("id", "self-img")
+        .attr("src", "public/img/run.svg");
+    $("body").append(selfImg);
 }
+
+function buildRainBar() {
+    var barPanel = buildBarPage();
+    $(barPanel).addClass("rain-background");
+}
+*/

@@ -11,48 +11,77 @@ body {
 }
 
 body {
-    margin-left: 5px;
-    margin-right: 5px;
     overflow-x: hidden;
 }
 
-.logo-background {
-    background-size: 100% 180%;
-    background-image: url(img/mountains-min.jpg);
-    background-position: 0% 100%;
-}
-
-.lights-background {
+.bar-panel {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
     background-size: 100% 100%;
-    background-image: url(img/infinity-min.jpg);
-    background-position: 0% 100%;
-    z-index: 1;
-
-    -moz-animation: lights-switch 30s linear infinite;
-    -o-animation: lights-switch 30s linear infinite;
-    -webkit-animation: lights-switch 30s linear infinite;
-    animation: lights-switch 30s linear infinite;
 }
 
-.lights-background:hover {
+#logo-img {
+    width: 100%;
+    height: 200px;
+    padding: 0px 25px;
+    margin-top: 20%;
+    opacity: 0.75;
 }
 
-.contacts-background {
-    background-size: 100% 180%;
-    background-image: url(img/clouds-min.jpg);
-    background-position: 0% 100%;
+#logo-img:hover {
+    opacity: 1;
+}
+
+
+.name-label,
+.scroll-down-img {
     text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 10px;
+}
+
+.scroll-down-img {
+    width: 100%;
+    -moz-animation: flash 2s linear infinite;
+    -o-animation: flash 2s linear infinite;
+    -webkit-animation: flash 2s linear infinite;
+    animation: flash 2s linear infinite;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#self-img {
+    float: right;
+    height: 100vh;
+    padding-top: 10%;
+    margin-right: 20px;
 }
 
 .clouds {
     background: transparent url(img/clouds-min.png) repeat top center;
     z-index: 3;
-    display: block;
+    display: inline;
     position: absolute;
-    top: 405px;
-    left: 5px;
-    right: 5px;
-    height: 195px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
     filter: invert(100%);
     -webkit-filter: invert(100%);
     background-size: 100% 250%;
@@ -78,50 +107,6 @@ body {
     to {background-position:10000px 0;}
 }
 
-@keyframes lights-switch {
-    0% {filter: hue-rotate(0deg);}
-    50% {filter: hue-rotate(180deg);}
-    100% {filter: hue-rotate(360deg);}
-}
-
-@-webkit-keyframes lights-switch {
-    0% {-webkit-filter: hue-rotate(0deg);}
-    50% {-webkit-filter: hue-rotate(180deg);}
-    100% {-webkit-filter: hue-rotate(360deg);}
-}
-
-@-moz-keyframes lights-switch {
-    0% {-webkit-filter: hue-rotate(0deg);}
-    50% {-webkit-filter: hue-rotate(180deg);}
-    100% {-webkit-filter: hue-rotate(360deg);}
-}
-
-.img-simple {
-    width: 100%;
-    height: 200px;
-    opacity: 0.75;
-}
-
-.bar-padding-mid {
-    padding: 25px 0px;
-}
-
-.bar-padding-bottom {
-    padding: 25px 0px 10px;
-}
-
-.img-simple:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.bar-panel {
-    background-color: #eee;
-    width: 100%;
-    height: 195px;
-    margin-top: 5px;
-}
-
 .circle-link {
     z-index: 4;
     height: 100px;
@@ -129,7 +114,7 @@ body {
     display: inline-block;
     position: relative;
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 5%;
     opacity: 0.8;
 }
 
@@ -150,9 +135,56 @@ body {
     border-radius: 50%;
 }
 
-#self-img {
-    height: 380px;
-    position: absolute;
-    top: 220px;
-    right: 5%;
+.contacts-background {
+    background-position: 0% 100%;
+    text-align: center;
+    height: 200px;
 }
+
+
+
+
+
+
+
+/*
+.lights-background {
+    background-size: 100% 100%;
+    background-image: url(img/infinity-min.jpg);
+    background-position: 0% 100%;
+    z-index: 1;
+
+    -moz-animation: lights-switch 30s linear infinite;
+    -o-animation: lights-switch 30s linear infinite;
+    -webkit-animation: lights-switch 30s linear infinite;
+    animation: lights-switch 30s linear infinite;
+}
+
+.rain-background{
+    background-size: 100% 100%;
+    background-image: url(img/rain.jpg);
+    background-position: 0% 100%;
+}
+
+@keyframes lights-switch {
+    0% {filter: hue-rotate(0deg);}
+    50% {filter: hue-rotate(180deg);}
+    100% {filter: hue-rotate(360deg);}
+}
+
+@-webkit-keyframes lights-switch {
+    0% {-webkit-filter: hue-rotate(0deg);}
+    50% {-webkit-filter: hue-rotate(180deg);}
+    100% {-webkit-filter: hue-rotate(360deg);}
+}
+
+@-moz-keyframes lights-switch {
+    0% {-webkit-filter: hue-rotate(0deg);}
+    50% {-webkit-filter: hue-rotate(180deg);}
+    100% {-webkit-filter: hue-rotate(360deg);}
+}
+
+.bar-padding-bottom {
+    padding: 25px 0px 10px;
+}
+*/
