@@ -7,10 +7,9 @@ function buildHomepage() {
 }
 
 function buildBarPage(imagePath) {
-    var barPanel = $("<div/>").addClass("bar-panel")
-        .css("background-image", "url(public/img/" + imagePath + ")")
-        .attr("data-stellar-background-ratio", "0.5")
-        .stellar();
+    var barPanel = $("<div/>").addClass("bar-panel parallax-window")
+        .attr("data-parallax", "scroll")
+        .attr("data-image-src", "public/img/" + imagePath);
     $("body").append(barPanel);
     return barPanel;
 }
