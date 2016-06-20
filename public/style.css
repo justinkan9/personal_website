@@ -26,7 +26,7 @@ body {
     height: 30vh;
     padding: 0px 10%;
     margin-top: 30vh;
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 #logo-img:hover {
@@ -70,8 +70,8 @@ body {
 #self-img {
     float: right;
     height: 100vh;
-    padding-top: 10%;
-    margin-right: 20px;
+    max-width: 50%;
+    padding: 120px 20px 0px;
 }
 
 .clouds {
@@ -141,6 +141,40 @@ body {
     height: 200px;
 }
 
+#koi-img {
+    width: 100%;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+#koi-img:hover {
+    opacity: 1;
+}
+
+#deep-ocean {
+    background: linear-gradient(0deg, #04316b, #2d6dbe, #009e57);
+    background-size: 600% 600%;
+    
+    -webkit-animation: deep-ocean 15s ease infinite;
+    -moz-animation: deep-ocean 15s ease infinite;
+    animation: deep-ocean 15s ease infinite;
+}
+
+@-webkit-keyframes deep-ocean {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes deep-ocean {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes deep-ocean {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
 
 
 

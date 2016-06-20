@@ -1,15 +1,19 @@
 function buildHomepage() {
     buildLogoBar();
     buildAboutMeBar();
+    buildPortfolioBar();
 //    buildVideosBar();
 //    buildRainBar();
     buildContactsBar();
 }
 
 function buildBarPage(imagePath) {
-    var barPanel = $("<div/>").addClass("bar-panel parallax-window")
-        .attr("data-parallax", "scroll")
-        .attr("data-image-src", "public/img/" + imagePath);
+    var barPanel = $("<div/>").addClass("bar-panel");
+    if(imagePath) {
+        $(barPanel).addClass("parallax-window")
+            .attr("data-parallax", "scroll")
+            .attr("data-image-src", "public/img/" + imagePath);
+    }
     $("body").append(barPanel);
     return barPanel;
 }
@@ -31,6 +35,13 @@ function buildAboutMeBar() {
     var selfImg = $("<img/>").attr("id", "self-img")
         .attr("src", "public/img/run.svg");
     $(barPanel).append(selfImg);
+}
+
+function buildPortfolioBar() {
+    var barPanel = buildBarPage("ocean-min.jpg");
+    var koiImg = $("<img/>").attr("id", "koi-img")
+        .attr("src", "public/img/koi.svg");
+    $(barPanel).append(koiImg);
 }
 
 function buildContactsBar() {
