@@ -142,9 +142,10 @@ body {
 }
 
 #koi-img {
-    max-width: 75%;
+    width: 100%;
     padding: 20px;
     opacity: 0.8;
+    max-height: 50%;
 }
 
 #koi-img:hover {
