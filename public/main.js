@@ -12,6 +12,7 @@ function buildBarPage(imagePath) {
     if(imagePath) {
         $(barPanel).addClass("parallax-window")
             .attr("data-parallax", "scroll")
+            .attr("data-ios-fix", "false")
             .attr("data-image-src", "public/img/" + imagePath);
     }
     $("body").append(barPanel);
