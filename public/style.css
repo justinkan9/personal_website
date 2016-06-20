@@ -17,7 +17,7 @@ body {
 .bar-panel {
     width: 100%;
     height: 100vh;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: 100% 100%;
 }
 
