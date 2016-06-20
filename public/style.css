@@ -73,9 +73,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #self-img {
     float: right;
-    height: 100vh;
-    max-width: 30%;
-    padding: 120px 20px 0px;
+    height: 80vh;
+    width: 30%;
+    background-image: url(img/run.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    margin-top: 20vh;
 }
 
 .clouds {
@@ -184,17 +188,17 @@ h1, h2, h3, h4, h5, h6 {
 .left-main {
     width: 70%;
     padding: 20px;
-    font-size: 25px;
+    font-size: 35px;
     font-family: 'Amatic SC', cursive;
     color: #182E96;
 }
 
 .text-header {
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Amatic SC', cursive;
     text-align: center;
     color: #DC2A09;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 

@@ -32,14 +32,13 @@ function buildLogoBar() {
 
 function buildAboutMeBar() {
     var barPanel = buildBarPage("field-min.jpg");
-    var selfImg = $("<img/>").attr("id", "self-img")
-        .attr("src", "public/img/run.svg");
+    var selfImg = $("<div/>").attr("id", "self-img");
     $(barPanel).append(selfImg);
 
     var mainDiv = $("<div/>").addClass("left-main");
     var header = $("<h1/>").addClass("text-header")
         .text("A little bit about me...");
-    var innerText = $("<p/>").text("\"Winning is great, sure, but if you are really going to do something in life, the secret is learning how to lose\"");
+    var innerText = $("<p/>").text("\"Winning is great, sure, but if you are really going to do something in life, the secret is learning how to lose.\"");
     var innerText2 = $("<p/>").text(" --Wilma Rudolph, Olympic Gold Medalist Sprinter");
     var innerText3 = $("<p/>").css("color", "#341798")
         .text("My life began in sunny Southern California where I was born and raised. Graduated from UCSD and eventually made my way up to the lovely Bay Area. Software engineering is my passion and career. Avid runner and admirer of all varieties of art. You may typically find me jogging before dinner, experimenting with unusual and compelling UI code, or painting past midnight.");
