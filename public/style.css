@@ -190,17 +190,26 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     font-size: 35px;
     font-family: 'Amatic SC', cursive;
-    color: #182E96;
+    color: #8576D1;
 }
 
 .text-header {
     font-size: 50px;
     font-family: 'Amatic SC', cursive;
     text-align: center;
-    color: #DC2A09;
+    color: #FF5A56;
     padding: 20px;
 }
 
+.sub-div {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sub-div > p {
+    text-align: center;
+}
 
 /*
 .lights-background {

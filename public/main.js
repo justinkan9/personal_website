@@ -36,19 +36,21 @@ function buildAboutMeBar() {
     $(barPanel).append(selfImg);
 
     var mainDiv = $("<div/>").addClass("left-main");
+    var subDiv = $("<div/>").addClass("sub-div");
     var header = $("<h1/>").addClass("text-header")
         .text("A little bit about me...");
     var innerText = $("<p/>").text("\"Winning is great, sure, but if you are really going to do something in life, the secret is learning how to lose.\"");
     var innerText2 = $("<p/>").text(" --Wilma Rudolph, Olympic Gold Medalist Sprinter");
-    var innerText3 = $("<p/>").css("color", "#341798")
+    var innerText3 = $("<p/>").css("color", "#A46ECE")
         .text("My life began in sunny Southern California where I was born and raised. Graduated from UCSD and eventually made my way up to the lovely Bay Area. Software engineering is my passion and career. Avid runner and admirer of all varieties of art. You may typically find me jogging before dinner, experimenting with unusual and compelling UI code, or painting past midnight.");
-    var innerText4 = $("<p/>").css("color", "#A80773")
+    var innerText4 = $("<p/>").css("color", "#DC6EB8")
         .text("Love is love.");
-    $(mainDiv).append(header)
+    $(subDiv).append(header)
         .append(innerText)
         .append(innerText2)
         .append(innerText3)
         .append(innerText4);
+    $(mainDiv).append(subDiv);
     $(barPanel).append(mainDiv);
 }
 
