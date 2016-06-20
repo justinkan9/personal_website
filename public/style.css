@@ -2,16 +2,20 @@
 
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:300);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC|Pacifico|Quicksand);
 
 /* Font */
 html,
 body {
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
 }
 
 .bar-panel {
@@ -70,7 +74,7 @@ body {
 #self-img {
     float: right;
     height: 100vh;
-    max-width: 50%;
+    max-width: 30%;
     padding: 120px 20px 0px;
 }
 
@@ -177,9 +181,21 @@ body {
     100%{background-position:50% 0%}
 }
 
+.left-main {
+    width: 70%;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Amatic SC', cursive;
+    color: #182E96;
+}
 
-
-
+.text-header {
+    font-size: 40px;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    color: #DC2A09;
+    padding-top: 20px;
+}
 
 
 /*
