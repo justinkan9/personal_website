@@ -15,4 +15,7 @@
 </html>
 <script>
     buildHomepage();
+    $(window).load(function() {
+        setTimeout(function() { clearLoadingScreen(); }, 3000);
+    });
 </script>

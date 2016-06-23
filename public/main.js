@@ -1,4 +1,5 @@
 function buildHomepage() {
+    buildLoadingScreen();
     buildLogoBar();
     buildAboutMeBar();
     buildPortfolioBar();
@@ -16,6 +17,21 @@ function buildBarPage(imagePath) {
     }
     $("body").append(barPanel);
     return barPanel;
+}
+
+function buildLoadingScreen() {
+    var barPanel = buildBarPage();
+    $(barPanel).attr("id", "loading-panel");
+    for(var i = 2; i <= 4; ++i) {
+        var fortuneId = "fortune" + i;
+        $(barPanel).append(
+            $("<div/>").attr("id", fortuneId)
+                .addClass("fortune-div"));
+    }
+}
+
+function clearLoadingScreen() {
+    $("#loading-panel").remove();
 }
 
 function buildLogoBar() {
