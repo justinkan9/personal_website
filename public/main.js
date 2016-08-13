@@ -30,10 +30,6 @@ function buildLoadingScreen() {
     }
 }
 
-function clearLoadingScreen() {
-    $("#loading-panel").remove();
-}
-
 function buildLogoBar() {
     var barPanel = buildBarPage("rainbow-star-min.png");
     var logo = $("<img/>").attr("src", "public/img/jkang.svg")
