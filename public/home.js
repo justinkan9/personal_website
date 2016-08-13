@@ -8,9 +8,7 @@ var HomePage = React.createClass({
                 <LoadingScreen/>
                 <div className="parallax">
                     <LogoPanel/>
-                    <FillerPanel/>
                     <AboutMePanel/>
-                    <FillerPanel/>
                     <PortfolioPanel/>
                     <ContactsPanel/>
                 </div>
@@ -26,17 +24,6 @@ var LoadingScreen = React.createClass({
                 <div className="fortune-div" id="fortune2"/>
                 <div className="fortune-div" id="fortune3"/>
                 <div className="fortune-div" id="fortune4"/>
-            </div>
-        );
-    }
-});
-
-var FillerPanel = React.createClass({
-    render: function() {
-        return(
-            <div className="parallax__group">
-                <div className="parallax__layer parallax__layer--base">
-                </div>
             </div>
         );
     }
@@ -61,8 +48,8 @@ var AboutMePanel = React.createClass({
     render: function() {
         return(
             <div id="about-me-parallax" className="parallax__group">
-                <div className="parallax__layer parallax__layer--back"/>
-                <div className="parallax__layer parallax__layer--base">
+                <div className="parallax__layer parallax__layer--base"/>
+                <div className="parallax__layer parallax__layer--fore">
                     <img id="logo-img" src="public/img/jkang.svg"/>
                     <h3 className="name-label">Justin   Seokhyun   Kang</h3>
                     <i className="fa fa-angle-down fa-4x scroll-down-img"/>
