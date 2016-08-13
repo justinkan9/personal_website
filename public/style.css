@@ -466,8 +466,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2) translateX(-8px);
+    -webkit-transform: translateZ(-300px) scale(2) translateX(-4px);
+    transform: translateZ(-300px) scale(2) translateX(-4px);
     z-index: 3;
 }
 
