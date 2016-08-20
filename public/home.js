@@ -50,7 +50,9 @@ var AboutMePanel = React.createClass({
             <div id="about-me-parallax" className="parallax__group">
                 <div className="parallax__layer parallax__layer--base"/>
                 <div className="parallax__layer parallax__layer--fore">
-                    <h1 className="title-top">about</h1>
+                    <div className="title-top-parent">
+                        <h1 className="title-top">about</h1>
+                    </div>
                     <div className="container">
                         <AboutTile labelText="run" imgPath="public/img/forest.svg"/>
                         <AboutTile labelText="design" imgPath="public/img/design.svg"/>

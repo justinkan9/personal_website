@@ -206,16 +206,15 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
 }
 
-#logo-img:hover {
-    opacity: 1;
+.name-label {
+    font-size: 16px;
 }
-
 
 .name-label,
 .scroll-down-img {
     text-align: center;
     color: #FFFFFF;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
 }
 
 .scroll-down-img {
@@ -480,24 +479,59 @@ h1, h2, h3, h4, h5, h6 {
 
 /* END Parallax */
 
+.title-top-parent {
+    width: 100%;
+    display: table;
+}
+
 .title-top {
+    height: 20vh;
+    vertical-align: middle;
+    display: table-cell;
     text-align: center;
-    margin: 15px;
     color: #FFF;
     height: 5%
     font-size: 50px;
 }
 
-#about-me-parallax .container {
-    height: 95%;
-    padding-top: 15%;
+.about-tile {
+    padding: 5vh 0;
+    height: 35vh;
+}
+
+.about-tile > img {
+    opacity: 0.7;
+    height: 80%;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.about-tile:hover {
+    cursor: pointer;
+}
+
+.about-tile:hover > p {
+    color: #EB9FEF;
+}
+
+.about-tile:hover > img {
+    opacity: 1;
+}
+
+.tile-label {
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 5px;
+    height: 20%;
 }
 
 @media (min-width: 768px) {
-    #about-me-parallax .container {
-        padding-top: 12%;
+
+    .about-tile {
+        height: 60vh;
     }
-    
+ 
     .contacts-background {
         height: 200px;
     }
@@ -519,32 +553,9 @@ h1, h2, h3, h4, h5, h6 {
         padding-top: 20px;
         font-size: 4em;
     }
-}
 
-.about-tile {
-    padding: 15px 0;
-}
-
-.about-tile > img {
-    margin: 0 20% 5px 20%;
-    opacity: 0.7;
-}
-
-.about-tile:hover {
-    cursor: pointer;
-}
-
-.about-tile:hover > p {
-    color: #EB9FEF;
-}
-
-.about-tile:hover > img {
-    opacity: 1;
-}
-
-.tile-label {
-    color: #FFF;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 5px;
+    .name-label {
+        font-size: 24px;
+        letter-spacing: 10px
+    }
 }
