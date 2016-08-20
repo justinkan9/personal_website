@@ -13,6 +13,7 @@
     "url": "https://github.com/justinkan9/personal_website"
   },
   "dependencies": {
-    "express": "4.13.4"
+    "express": "4.13.4",
+    "instagram-node": "^0.5.8"
   }
 }
